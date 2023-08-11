@@ -1,0 +1,626 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding: 0 8px;
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+/* ////////////////////*/
+
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+#navigation{
+    display: inline-block;
+}
+
+#navigation>li{
+    display: inline-block;
+}
+#navigation>li>a{
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+#navigation li a{
+    font-size: 15px;
+    padding-left: 24px;
+    padding-right: 24px;
+    line-height: 46px;
+}
+.hidenavi{
+    position: absolute;
+    top: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#navigation .hidenavi{
+    display: none;
+    color: black;
+    min-width: 160px;
+    background-color: white;
+    line-height: 38.5px; 
+}
+#navigation .hidenavi li a{
+    color: black;
+}
+#navigation li:hover .hidenavi{
+    display: block;
+}
+
+#navigation> li:hover> a{
+    color: black;
+    background-color: #ccc;
+    display: block;
+}
+
+#navigation .hidenavi li:hover a{
+    background-color: #ccc;
+    display:block;
+}
+
+#navigation .ti-angle-down{
+    font-size: 14px;
+}
+
+.mobile-menu-btn{
+    padding-left: 21px;
+    padding-right: 21px;
+    float: right;
+    max-height: 46px;
+    line-height: 52px;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.search{
+    padding-left: 21px;
+    padding-right: 21px;
+    float: right;
+    max-height: 46px;
+    line-height: 52px;
+}
+.ti-menu,
+.ti-search{
+    font-size: 20px;
+    color: white;
+    line-height: 46px;
+}
+
+.mobile-menu-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+.mobile-menu-btn .ti-menu:hover{
+    color: black;
+}
+.search:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slide{
+    color: white;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url(https://www.w3schools.com/w3images/chicago.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#slide .chicago{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#slide .ty{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ 
+.about{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about2{
+    font-style: italic;
+    opacity: 60%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about3{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.members{
+    /* width: 768px; */
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.member1{
+    width: 256px;
+    height: auto;
+
+}
+
+.members .member p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.member1{
+    float: left;
+    text-align: center;
+}
+
+.img1{
+    width: 154px;
+    height: auto;
+}
+
+.clear{
+    clear: both;
+}
+
+.tourdates{
+    background-color: black;
+}
+
+.tourdate{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.tourdates .about1{
+    color: white;
+}
+.tourdates .about2{
+    color: #ccc;
+}
+
+.tickets{
+    margin-top: 40px;
+    background-color: white;
+}
+.ticket{
+    
+    padding: 8px 16px;
+    font-size: 15px;
+}
+
+.tickets li{
+    color:#757575;
+    padding: 11px;
+}
+.one{
+    border-bottom: 1px solid #ccc;
+}
+.sold{
+    background-color: #f44336;
+    color: white;
+    padding: 3px 8px;
+    margin-left: 16px;
+}
+.sell{
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    float: right;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+.places{
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-top: 64px;
+}
+
+.place{
+    float: left;
+    width: 33.333333%;
+    padding: 0 8px;
+}
+
+.info{
+    background-color: white;
+}
+
+.photo{
+    width: 100%;
+    display: block;
+}
+
+.photo:hover{
+    opacity: 0.6;
+}
+
+.place h2{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+.time{
+    color: black;
+    opacity: 50%;
+}
+.buy{
+   color: white;
+   background-color: black;
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   margin-bottom: 15px;
+   border: none;
+}
+.buy:hover{
+    cursor: pointer;
+    color: black;
+    background-color: #ccc;
+    
+}
+
+.info{
+    padding: 0 16px;
+}
+.info h2{
+    padding: 15px 0px;
+}
+.info p{
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: white;
+    width: 900px;
+    position: relative;
+    max-width: calc(100% - 40px);
+
+    animation: popups ease 0.5s;
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 15px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.modal-close:hover{
+    opacity:1;
+}
+.modal-header{
+    color: white;
+    background-color: #009688;
+    height: 130px;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+}
+.modal-body{
+    color: black;
+    background-color: white;
+    padding: 15px;
+}
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input{
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+#buyticket{
+    font-size: 15px;
+    padding: 14px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #009688;
+    color: white;
+    border: none;
+}
+#buyticket:hover{
+    opacity: 0.9;
+}
+
+.label-footer{
+    padding: 15px;
+    text-align: right;
+}
+.label-footer a{
+    color: #2196F3;
+}
+
+@keyframes popups{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contactsection{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.contactsection .contactheading{
+    color: black;
+    text-align: center;
+}
+.contactsection .message{
+    opacity: 0.6;
+    font-style: italic;
+    text-align: center;
+    margin: 15px 0px 40px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.4;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+.form-control{
+    padding: 11px;
+    border: #ccc solid 1px;
+    width: 100%;
+}
+.contact-form .mt-16{
+    color: white;
+    background-color: black;
+    padding: 10px 16px;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 48px;
+}
+.contact-form .mt-16:hover{
+    opacity: 0.8;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+.social-list{
+    font-size: 24px;
+}
+.social-list a{
+    color: black;
+    opacity: 0.6;
+}
+.social-list a:hover{
+    color: black;
+    opacity: 0.3;
+}
+.copyright{
+    margin-top: 15px;
+    color: black;
+    opacity: 0.6;
+}
+
+@media (min-width: 451px) and (max-width: 800px){
+
+    .row{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #header,#content{
+        max-width: 100%;
+    }
+    .contactsection,
+    .tourdates,
+    .tourdate,
+    .places{
+        max-width: 100%;
+    }
+    .places{
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    .place{
+        max-width: 33.3333%;
+        text-align: center;
+    }
+    .members{
+        max-width: 100%;
+    }
+    .member1{
+        max-width: 33.33333%;
+    }
+    .about{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .contact-info{
+        max-width: 384px;
+    }
+    .col-full{
+        max-width: 384px;
+        padding-right: 8px;
+    }
+    .contact-form .mt-16{
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 450px)
+{
+    #header{
+        max-width: 100%;
+    }
+    #slide .chicago{
+        display: none;
+    }
+    #slide .ty{
+        display: none;
+    }
+
+    #navigation{
+        display: block;
+    }
+    #navigation>li{
+        display: block;
+    }
+    #navigation>li:first-child{
+        display: inline-block;
+    }
+    #navigation .hidenavi{
+        position: initial;
+        background-color: black;
+    }
+    #navigation .hidenavi li a{
+        color: white;
+        padding-left: 40px;
+    }
+    #header{
+        overflow: hidden;
+    }
+    .search{
+        display: none;
+    }
+
+    #mobile-menu{
+        display: block;
+    }
+
+    .contactsection, .tourdates, .tourdate, .places {
+        max-width: 100%;
+    }
+
+    .member1{
+        float: unset;
+        width: unset;
+        margin-bottom: 16px;
+    }
+    .img1{
+        margin-top: 15px;
+        margin-bottom: 16px;
+        width: 60%;
+    }
+
+    .places{
+        margin: unset;
+    }
+    .place{
+        width: unset;
+        float: unset;
+        margin-bottom: 16px;
+    }
+
+
+    #contact.contactsection{
+        padding: 64px 16px;
+    }
+    .col.col-half{
+        width: 100%;
+    }
+    .col.col-half.contact-info{
+        margin-bottom: 16px;
+    }
+}
